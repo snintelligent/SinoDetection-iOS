@@ -1,0 +1,6 @@
+framework module SinoDetection {
+  umbrella header "SinoDetection.h"
+
+  export *
+  module * { export * }
+}

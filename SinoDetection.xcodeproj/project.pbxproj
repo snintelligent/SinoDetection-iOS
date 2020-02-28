@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6479A82023BB31DB00A46DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6479A81F23BB31DB00A46DA5 /* Assets.xcassets */; };
+		6479A83023BB31DB00A46DA5 /* SinoDetectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A82F23BB31DB00A46DA5 /* SinoDetectionTests.m */; };
+		6479A84923BB322D00A46DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6479A83E23BB322D00A46DA5 /* LaunchScreen.storyboard */; };
+		6479A84A23BB322D00A46DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6479A84023BB322D00A46DA5 /* Main.storyboard */; };
+		6479A84B23BB322D00A46DA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A84223BB322D00A46DA5 /* main.m */; };
+		6479A84C23BB322D00A46DA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A84323BB322D00A46DA5 /* AppDelegate.m */; };
+		6479A85023BB328600A46DA5 /* SinoDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6479A84F23BB328600A46DA5 /* SinoDetection.framework */; };
+		6479A86223BB331B00A46DA5 /* SDTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A85523BB331B00A46DA5 /* SDTestController.m */; };
+		6479A86323BB331B00A46DA5 /* SDScanDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A85823BB331B00A46DA5 /* SDScanDeviceController.m */; };
+		6479A86423BB331B00A46DA5 /* SDDeviceTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A85A23BB331B00A46DA5 /* SDDeviceTypeController.m */; };
+		6479A86523BB331B00A46DA5 /* SDCommandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A85D23BB331B00A46DA5 /* SDCommandController.m */; };
+		6479A86623BB331B00A46DA5 /* SDBoundDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6479A86123BB331B00A46DA5 /* SDBoundDeviceController.m */; };
+		6BFE02E7E77DA3E911B215DE /* Pods_SinoDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35D04A91C27D323EC73CBEC /* Pods_SinoDetection.framework */; };
+		7427DEE9608CD1754EF3D379 /* Pods_SinoDetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1F595FE701DE9A4D9A2213 /* Pods_SinoDetectionTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6479A82C23BB31DB00A46DA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6479A80823BB31DA00A46DA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6479A80F23BB31DA00A46DA5;
+			remoteInfo = SinoDetection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B3D6FE7C020ABB03DFE2F1B /* Pods-SinoDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinoDetection.release.xcconfig"; path = "Target Support Files/Pods-SinoDetection/Pods-SinoDetection.release.xcconfig"; sourceTree = "<group>"; };
+		6479A81023BB31DA00A46DA5 /* SinoDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinoDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6479A81F23BB31DB00A46DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6479A82B23BB31DB00A46DA5 /* SinoDetectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinoDetectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6479A82F23BB31DB00A46DA5 /* SinoDetectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinoDetectionTests.m; sourceTree = "<group>"; };
+		6479A83123BB31DB00A46DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6479A83B23BB322D00A46DA5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6479A83F23BB322D00A46DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6479A84123BB322D00A46DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6479A84223BB322D00A46DA5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6479A84323BB322D00A46DA5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6479A84423BB322D00A46DA5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6479A84F23BB328600A46DA5 /* SinoDetection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SinoDetection.framework; sourceTree = "<group>"; };
+		6479A85123BB32F200A46DA5 /* SinoDetection-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SinoDetection-prefix.pch"; sourceTree = "<group>"; };
+		6479A85423BB331B00A46DA5 /* SDTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTestController.h; sourceTree = "<group>"; };
+		6479A85523BB331B00A46DA5 /* SDTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTestController.m; sourceTree = "<group>"; };
+		6479A85723BB331B00A46DA5 /* SDScanDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDScanDeviceController.h; sourceTree = "<group>"; };
+		6479A85823BB331B00A46DA5 /* SDScanDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDScanDeviceController.m; sourceTree = "<group>"; };
+		6479A85A23BB331B00A46DA5 /* SDDeviceTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDeviceTypeController.m; sourceTree = "<group>"; };
+		6479A85B23BB331B00A46DA5 /* SDDeviceTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDeviceTypeController.h; sourceTree = "<group>"; };
+		6479A85D23BB331B00A46DA5 /* SDCommandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCommandController.m; sourceTree = "<group>"; };
+		6479A85E23BB331B00A46DA5 /* SDCommandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCommandController.h; sourceTree = "<group>"; };
+		6479A86023BB331B00A46DA5 /* SDBoundDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBoundDeviceController.h; sourceTree = "<group>"; };
+		6479A86123BB331B00A46DA5 /* SDBoundDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBoundDeviceController.m; sourceTree = "<group>"; };
+		6E1F595FE701DE9A4D9A2213 /* Pods_SinoDetectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinoDetectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A35D04A91C27D323EC73CBEC /* Pods_SinoDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinoDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B1D160C37ADFC9E92F6B5F /* Pods-SinoDetectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinoDetectionTests.release.xcconfig"; path = "Target Support Files/Pods-SinoDetectionTests/Pods-SinoDetectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACADE92E4104BD692823B985 /* Pods-SinoDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinoDetection.debug.xcconfig"; path = "Target Support Files/Pods-SinoDetection/Pods-SinoDetection.debug.xcconfig"; sourceTree = "<group>"; };
+		CD99BAEEBF55F8FB8692CE0F /* Pods-SinoDetectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinoDetectionTests.debug.xcconfig"; path = "Target Support Files/Pods-SinoDetectionTests/Pods-SinoDetectionTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6479A80D23BB31DA00A46DA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFE02E7E77DA3E911B215DE /* Pods_SinoDetection.framework in Frameworks */,
+				6479A85023BB328600A46DA5 /* SinoDetection.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6479A82823BB31DB00A46DA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7427DEE9608CD1754EF3D379 /* Pods_SinoDetectionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43321ED537D7C97B0F457F5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A35D04A91C27D323EC73CBEC /* Pods_SinoDetection.framework */,
+				6E1F595FE701DE9A4D9A2213 /* Pods_SinoDetectionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6479A80723BB31DA00A46DA5 = {
+			isa = PBXGroup;
+			children = (
+				6479A81223BB31DA00A46DA5 /* SinoDetection */,
+				6479A82E23BB31DB00A46DA5 /* SinoDetectionTests */,
+				6479A81123BB31DA00A46DA5 /* Products */,
+				A093AB90992755A40975CDE9 /* Pods */,
+				43321ED537D7C97B0F457F5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6479A81123BB31DA00A46DA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6479A81023BB31DA00A46DA5 /* SinoDetection.app */,
+				6479A82B23BB31DB00A46DA5 /* SinoDetectionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6479A81223BB31DA00A46DA5 /* SinoDetection */ = {
+			isa = PBXGroup;
+			children = (
+				6479A85223BB331B00A46DA5 /* Features */,
+				6479A84E23BB328600A46DA5 /* Vendors */,
+				6479A83A23BB322D00A46DA5 /* AppEntry */,
+				6479A81F23BB31DB00A46DA5 /* Assets.xcassets */,
+			);
+			path = SinoDetection;
+			sourceTree = "<group>";
+		};
+		6479A82E23BB31DB00A46DA5 /* SinoDetectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				6479A82F23BB31DB00A46DA5 /* SinoDetectionTests.m */,
+				6479A83123BB31DB00A46DA5 /* Info.plist */,
+			);
+			path = SinoDetectionTests;
+			sourceTree = "<group>";
+		};
+		6479A83A23BB322D00A46DA5 /* AppEntry */ = {
+			isa = PBXGroup;
+			children = (
+				6479A83B23BB322D00A46DA5 /* AppDelegate.h */,
+				6479A84323BB322D00A46DA5 /* AppDelegate.m */,
+				6479A84023BB322D00A46DA5 /* Main.storyboard */,
+				6479A83E23BB322D00A46DA5 /* LaunchScreen.storyboard */,
+				6479A85123BB32F200A46DA5 /* SinoDetection-prefix.pch */,
+				6479A84223BB322D00A46DA5 /* main.m */,
+				6479A84423BB322D00A46DA5 /* Info.plist */,
+			);
+			path = AppEntry;
+			sourceTree = "<group>";
+		};
+		6479A84E23BB328600A46DA5 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				6479A84F23BB328600A46DA5 /* SinoDetection.framework */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		6479A85223BB331B00A46DA5 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				6479A85323BB331B00A46DA5 /* Test */,
+				6479A85623BB331B00A46DA5 /* ScanDevice */,
+				6479A85923BB331B00A46DA5 /* DeviceType */,
+				6479A85C23BB331B00A46DA5 /* Command */,
+				6479A85F23BB331B00A46DA5 /* BoundDevice */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		6479A85323BB331B00A46DA5 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				6479A85423BB331B00A46DA5 /* SDTestController.h */,
+				6479A85523BB331B00A46DA5 /* SDTestController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		6479A85623BB331B00A46DA5 /* ScanDevice */ = {
+			isa = PBXGroup;
+			children = (
+				6479A85723BB331B00A46DA5 /* SDScanDeviceController.h */,
+				6479A85823BB331B00A46DA5 /* SDScanDeviceController.m */,
+			);
+			path = ScanDevice;
+			sourceTree = "<group>";
+		};
+		6479A85923BB331B00A46DA5 /* DeviceType */ = {
+			isa = PBXGroup;
+			children = (
+				6479A85B23BB331B00A46DA5 /* SDDeviceTypeController.h */,
+				6479A85A23BB331B00A46DA5 /* SDDeviceTypeController.m */,
+			);
+			path = DeviceType;
+			sourceTree = "<group>";
+		};
+		6479A85C23BB331B00A46DA5 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				6479A85E23BB331B00A46DA5 /* SDCommandController.h */,
+				6479A85D23BB331B00A46DA5 /* SDCommandController.m */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		6479A85F23BB331B00A46DA5 /* BoundDevice */ = {
+			isa = PBXGroup;
+			children = (
+				6479A86023BB331B00A46DA5 /* SDBoundDeviceController.h */,
+				6479A86123BB331B00A46DA5 /* SDBoundDeviceController.m */,
+			);
+			path = BoundDevice;
+			sourceTree = "<group>";
+		};
+		A093AB90992755A40975CDE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACADE92E4104BD692823B985 /* Pods-SinoDetection.debug.xcconfig */,
+				3B3D6FE7C020ABB03DFE2F1B /* Pods-SinoDetection.release.xcconfig */,
+				CD99BAEEBF55F8FB8692CE0F /* Pods-SinoDetectionTests.debug.xcconfig */,
+				A4B1D160C37ADFC9E92F6B5F /* Pods-SinoDetectionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6479A80F23BB31DA00A46DA5 /* SinoDetection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6479A83423BB31DB00A46DA5 /* Build configuration list for PBXNativeTarget "SinoDetection" */;
+			buildPhases = (
+				FE45D62BD38F8F4D03B0E01B /* [CP] Check Pods Manifest.lock */,
+				6479A80C23BB31DA00A46DA5 /* Sources */,
+				6479A80D23BB31DA00A46DA5 /* Frameworks */,
+				6479A80E23BB31DA00A46DA5 /* Resources */,
+				4BC3616F49CAFD5AA49FC084 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SinoDetection;
+			productName = SinoDetection;
+			productReference = 6479A81023BB31DA00A46DA5 /* SinoDetection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6479A82A23BB31DB00A46DA5 /* SinoDetectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6479A83723BB31DB00A46DA5 /* Build configuration list for PBXNativeTarget "SinoDetectionTests" */;
+			buildPhases = (
+				F93A440048967906AEC3A86D /* [CP] Check Pods Manifest.lock */,
+				6479A82723BB31DB00A46DA5 /* Sources */,
+				6479A82823BB31DB00A46DA5 /* Frameworks */,
+				6479A82923BB31DB00A46DA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6479A82D23BB31DB00A46DA5 /* PBXTargetDependency */,
+			);
+			name = SinoDetectionTests;
+			productName = SinoDetectionTests;
+			productReference = 6479A82B23BB31DB00A46DA5 /* SinoDetectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6479A80823BB31DA00A46DA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Sinocare Inc.";
+				TargetAttributes = {
+					6479A80F23BB31DA00A46DA5 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					6479A82A23BB31DB00A46DA5 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 6479A80F23BB31DA00A46DA5;
+					};
+				};
+			};
+			buildConfigurationList = 6479A80B23BB31DA00A46DA5 /* Build configuration list for PBXProject "SinoDetection" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6479A80723BB31DA00A46DA5;
+			productRefGroup = 6479A81123BB31DA00A46DA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6479A80F23BB31DA00A46DA5 /* SinoDetection */,
+				6479A82A23BB31DB00A46DA5 /* SinoDetectionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6479A80E23BB31DA00A46DA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6479A84A23BB322D00A46DA5 /* Main.storyboard in Resources */,
+				6479A84923BB322D00A46DA5 /* LaunchScreen.storyboard in Resources */,
+				6479A82023BB31DB00A46DA5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6479A82923BB31DB00A46DA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BC3616F49CAFD5AA49FC084 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SinoDetection/Pods-SinoDetection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SinoDetection/Pods-SinoDetection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SinoDetection/Pods-SinoDetection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F93A440048967906AEC3A86D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SinoDetectionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE45D62BD38F8F4D03B0E01B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SinoDetection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6479A80C23BB31DA00A46DA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6479A84C23BB322D00A46DA5 /* AppDelegate.m in Sources */,
+				6479A86423BB331B00A46DA5 /* SDDeviceTypeController.m in Sources */,
+				6479A86223BB331B00A46DA5 /* SDTestController.m in Sources */,
+				6479A84B23BB322D00A46DA5 /* main.m in Sources */,
+				6479A86523BB331B00A46DA5 /* SDCommandController.m in Sources */,
+				6479A86623BB331B00A46DA5 /* SDBoundDeviceController.m in Sources */,
+				6479A86323BB331B00A46DA5 /* SDScanDeviceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6479A82723BB31DB00A46DA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6479A83023BB31DB00A46DA5 /* SinoDetectionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6479A82D23BB31DB00A46DA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6479A80F23BB31DA00A46DA5 /* SinoDetection */;
+			targetProxy = 6479A82C23BB31DB00A46DA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6479A83E23BB322D00A46DA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6479A83F23BB322D00A46DA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6479A84023BB322D00A46DA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6479A84123BB322D00A46DA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6479A83223BB31DB00A46DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6479A83323BB31DB00A46DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6479A83523BB31DB00A46DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACADE92E4104BD692823B985 /* Pods-SinoDetection.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42RLUT39J9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SinoDetection/Vendors",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SinoDetection/AppEntry/SinoDetection-prefix.pch";
+				INFOPLIST_FILE = SinoDetection/AppEntry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"LKDBHelper\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinocare.SinoDetection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6479A83623BB31DB00A46DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B3D6FE7C020ABB03DFE2F1B /* Pods-SinoDetection.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42RLUT39J9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SinoDetection/Vendors",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SinoDetection/AppEntry/SinoDetection-prefix.pch";
+				INFOPLIST_FILE = SinoDetection/AppEntry/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"FMDB\"",
+					"-framework",
+					"\"LKDBHelper\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinocare.SinoDetection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6479A83823BB31DB00A46DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD99BAEEBF55F8FB8692CE0F /* Pods-SinoDetectionTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42RLUT39J9;
+				INFOPLIST_FILE = SinoDetectionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinocare.SinoDetectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinoDetection.app/SinoDetection";
+			};
+			name = Debug;
+		};
+		6479A83923BB31DB00A46DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B1D160C37ADFC9E92F6B5F /* Pods-SinoDetectionTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42RLUT39J9;
+				INFOPLIST_FILE = SinoDetectionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinocare.SinoDetectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinoDetection.app/SinoDetection";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6479A80B23BB31DA00A46DA5 /* Build configuration list for PBXProject "SinoDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6479A83223BB31DB00A46DA5 /* Debug */,
+				6479A83323BB31DB00A46DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6479A83423BB31DB00A46DA5 /* Build configuration list for PBXNativeTarget "SinoDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6479A83523BB31DB00A46DA5 /* Debug */,
+				6479A83623BB31DB00A46DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6479A83723BB31DB00A46DA5 /* Build configuration list for PBXNativeTarget "SinoDetectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6479A83823BB31DB00A46DA5 /* Debug */,
+				6479A83923BB31DB00A46DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6479A80823BB31DA00A46DA5 /* Project object */;
+}
