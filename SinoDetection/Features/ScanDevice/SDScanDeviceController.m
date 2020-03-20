@@ -46,7 +46,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer forIndexPath:indexPath];
     SDDeviceModel *scannedDevice = [SDDeviceManager sharedDeviceManager].scannedDevices[indexPath.row];
     cell.textLabel.text = scannedDevice.idName?:@"未命名";
-    cell.detailTextLabel.text = scannedDevice.formattedMac;
+    NSString *tmp;
+    if (scannedDevice.formattedMac.length > 0) {
+        tmp = scannedDevice.formattedMac;
+    } else if (scannedDevice.uuid.length > 0) {
+        tmp = scannedDevice.uuid;
+    }
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", tmp];
     return cell;
 }
 

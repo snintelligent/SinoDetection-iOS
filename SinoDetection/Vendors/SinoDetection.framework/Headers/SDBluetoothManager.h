@@ -21,11 +21,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param boundDevice 绑定的设备
 typedef void(^SDBMDidReceiveData)(SDDetectionDataModel * _Nullable data, SDBussinessStateModel * _Nullable state, SDDeviceModel *boundDevice);
 
+/// 已接收到Mac地址
+/// @note 针对卡迪克
+/// @param mac Mac地址
+/// @param boundDevice 绑定的设备
+typedef void(^SDBMDidReceiveMac)(NSString * _Nullable mac, SDDeviceModel *boundDevice);
+
 /// 蓝牙管理类
 @interface SDBluetoothManager : NSObject
 
 /// 已接收到数据代码块
 @property (nonatomic, copy) SDBMDidReceiveData didReceiveData;
+
+/// 已接收到Mac地址
+/// @note 针对卡迪克
+@property (nonatomic, copy) SDBMDidReceiveMac didReceiveMac;
 
 /// 构造蓝牙管理类单例对象
 /// @return 蓝牙管理类单例对象

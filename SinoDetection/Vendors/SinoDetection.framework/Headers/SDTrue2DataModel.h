@@ -10,25 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 采血部位枚举
-typedef NS_ENUM(NSUInteger, SDTDMBldCollSite) {
-    SDTDMBldCollSiteUnknown, ///< 未知
-    SDTDMBldCollSiteFingertip, ///< 手指指尖血
-    SDTDMBldCollSiteMulti, ///< 多部位采血
-};
-
-/// 营养状态枚举
-typedef NS_ENUM(NSUInteger, SDTDMNutritionStatus) {
-    SDTDMNutritionStatusUnknown, ///< 未知
-    SDTDMNutritionStatusRandom, ///< 随机
-    SDTDMNutritionStatusBeforeMeal, ///< 餐前（空腹）
-    SDTDMNutritionStatusAfterMeal, ///< 餐后（非空腹）
-    SDTDMNutritionStatusSport, ///< 运动
-    SDTDMNutritionStatusSick, ///< 生病
-    SDTDMNutritionStatusTakeMedicine, ///< 服药
-    SDTDMNutritionStatusOther ///< 其他
-};
-
 @interface SDTrue2DataModel : SDBaseDataModel
 /// 年，例如：19
 @property (nonatomic, assign) NSUInteger year;
@@ -60,9 +41,9 @@ typedef NS_ENUM(NSUInteger, SDTDMNutritionStatus) {
 /// 单位
 @property (nonatomic, strong, readonly) NSString *unit;
 /// 采血部位
-@property (nonatomic, assign) SDTDMBldCollSite bldCollSite;
+@property (nonatomic, assign) SDCBldCollSite bldCollSite;
 /// 营养状态
-@property (nonatomic, assign) SDTDMNutritionStatus nutritionStatus;
+@property (nonatomic, assign) SDCNutritionStatus nutritionStatus;
 /// 血细胞压积，正常范围应为0-100
 @property (nonatomic, assign) NSUInteger hematocrit;
 @end

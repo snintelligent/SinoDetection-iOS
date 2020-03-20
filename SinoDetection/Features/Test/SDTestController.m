@@ -114,18 +114,39 @@ static NSString * const kTCData = @"kTCData";
         NSDictionary *dict = _states[indexPath.row];
         SDDeviceModel *boundDevice = dict[kTCBoundDevice];
         SDBussinessStateModel *state = dict[kTCState];
-        NSString *time = dict[kTCTime];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@（%@）", boundDevice.name, state.desc];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@", boundDevice.formattedMac, time];
+        UILabel *textLabel = [cell.contentView viewWithTag:1000];
+        textLabel.text = [NSString stringWithFormat:@"%@（%@）", boundDevice.name, state.desc];
+        textLabel = [cell.contentView viewWithTag:1001];
+        NSString *tmp;
+        if (boundDevice.formattedMac.length > 0) {
+            tmp = boundDevice.formattedMac;
+        } else if (boundDevice.uuid.length > 0) {
+            tmp = boundDevice.uuid;
+        }
+        textLabel.text = [NSString stringWithFormat:@"%@", tmp];
+        textLabel = [cell.contentView viewWithTag:1002];
+        textLabel.text = [NSString stringWithFormat:@" %@", dict[kTCTime]];
     } else if (tableView == _dataView) {
         NSDictionary *dict = _datas[indexPath.row];
         SDDeviceModel *boundDevice = dict[kTCBoundDevice];
         SDDetectionDataModel *data = dict[kTCData];
-        NSString *time = dict[kTCTime];
         UILabel *textLabel = [cell.contentView viewWithTag:1000];
         textLabel.text = [data description];
+        // !!!: 举例取安稳+Air的数据
+        if (boundDevice.type == SDCDeviceTypeAnWenAir) {
+            SDAnWenAirDataModel *anWenAirData = (SDAnWenAirDataModel *)data.data;
+            NSLog(@"anWenAirData=%@", anWenAirData);
+        }
         textLabel = [cell.contentView viewWithTag:1001];
-        textLabel.text = [NSString stringWithFormat:@"%@ %@", boundDevice.formattedMac, time];
+        NSString *tmp;
+        if (boundDevice.formattedMac.length > 0) {
+            tmp = boundDevice.formattedMac;
+        } else if (boundDevice.uuid.length > 0) {
+            tmp = boundDevice.uuid;
+        }
+        textLabel.text = [NSString stringWithFormat:@"%@", tmp];
+        textLabel = [cell.contentView viewWithTag:1002];
+        textLabel.text = [NSString stringWithFormat:@" %@", dict[kTCTime]];
     }
     return cell;
 }

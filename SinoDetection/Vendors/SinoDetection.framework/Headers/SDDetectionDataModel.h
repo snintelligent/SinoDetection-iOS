@@ -10,6 +10,9 @@
 #import "SDAnWenAirDataModel.h"
 #import "SDWLOneDataModel.h"
 #import "SDTrue2DataModel.h"
+#import "SDEADataModel.h"
+#import "SDCardioChekDataModel.h"
+#import "SDSLX120DataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

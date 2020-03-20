@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
 @property (nonatomic, strong) NSArray *correctCodes;
 @property (nonatomic, assign) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSArray<SDDeviceModel *> *filteredDevices;
 @end
 
 @implementation SDCommandController
@@ -30,6 +31,7 @@
     // Do any additional setup after loading the view.
     self.title = @"写命令";
     [self setupCorrectCodes];
+    [self setupFilteredDevices];
 }
 
 #pragma mark - Private Methods
@@ -91,6 +93,16 @@
     }];
 }
 
+- (void)setupFilteredDevices {
+    NSMutableArray *filteredDevices = [NSMutableArray arrayWithCapacity:0];
+    for (SDDeviceModel *boundDevice in [SDDeviceManager sharedDeviceManager].boundDevices) {
+        if (boundDevice.writeCommands.count > 0) {
+            [filteredDevices addObject:boundDevice];
+        }
+    }
+    self.filteredDevices = [filteredDevices copy];
+}
+
 #pragma mark - Gesture Methods
 - (IBAction)correctCodeViewTapped:(UITapGestureRecognizer *)tap {
     [self hideCorrectCodeView];
@@ -113,7 +125,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     NSInteger row = [_ccPickerView selectedRowInComponent:0];
     NSString *correctCode = [_correctCodes[row] stringValue];
-    SDDeviceModel *boundDevice = [SDDeviceManager sharedDeviceManager].boundDevices[_indexPath.section];
+    SDDeviceModel *boundDevice = _filteredDevices[_indexPath.section];
     NSDictionary *writeCommand = boundDevice.writeCommands[_indexPath.row];
     SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
     if (_writeCommand) {
@@ -128,7 +140,7 @@
 - (IBAction)timeDoneBarButtonItemClicked:(UIBarButtonItem *)timeDoneBarButtonItem {
     [self dismissViewControllerAnimated:YES completion:nil];
     NSString *time = [_timePicker.date stringWithFormat:@"yyyy-MM-dd HH:mm:ss"];
-    SDDeviceModel *boundDevice = [SDDeviceManager sharedDeviceManager].boundDevices[_indexPath.section];
+    SDDeviceModel *boundDevice = _filteredDevices[_indexPath.section];
     NSDictionary *writeCommand = boundDevice.writeCommands[_indexPath.row];
     SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
     if (_writeCommand) {
@@ -138,32 +150,38 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [SDDeviceManager sharedDeviceManager].boundDevices.count;
+    return _filteredDevices.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [SDDeviceManager sharedDeviceManager].boundDevices[section].writeCommands.count;
+    return _filteredDevices[section].writeCommands.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifer = @"SDCommandCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer forIndexPath:indexPath];
-    SDDeviceModel *boundDevice = [SDDeviceManager sharedDeviceManager].boundDevices[indexPath.section];
+    SDDeviceModel *boundDevice = _filteredDevices[indexPath.section];
     NSDictionary *writeCommand = boundDevice.writeCommands[indexPath.row];
     cell.textLabel.text = writeCommand[SDCWriteCommandDescription];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    SDDeviceModel *boundDevice = [SDDeviceManager sharedDeviceManager].boundDevices[section];
-    return [NSString stringWithFormat:@"%@-%@ %@", boundDevice.name, boundDevice.bluetoothName, boundDevice.formattedMac];
+    SDDeviceModel *boundDevice = _filteredDevices[section];
+    NSString *tmp;
+    if (boundDevice.formattedMac.length > 0) {
+        tmp = boundDevice.formattedMac;
+    } else if (boundDevice.uuid.length > 0) {
+        tmp = boundDevice.uuid;
+    }
+    return [NSString stringWithFormat:@"%@-%@ %@", boundDevice.name, boundDevice.bluetoothName, tmp];
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.indexPath = indexPath;
-    SDDeviceModel *boundDevice = [SDDeviceManager sharedDeviceManager].boundDevices[indexPath.section];
+    SDDeviceModel *boundDevice = _filteredDevices[indexPath.section];
     NSDictionary *writeCommand = boundDevice.writeCommands[indexPath.row];
     SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
     if (writeCmd == SDCCommandTypeSetCorrectCode) {

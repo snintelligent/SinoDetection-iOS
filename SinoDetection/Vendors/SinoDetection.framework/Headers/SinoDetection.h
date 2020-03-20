@@ -15,15 +15,19 @@ FOUNDATION_EXPORT double SinoDetectionVersionNumber;
 FOUNDATION_EXPORT const unsigned char SinoDetectionVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SinoDetection/PublicHeader.h>
-#import <SinoDetection/SDAuthManager.h>
 #import <SinoDetection/SDBluetoothManager.h>
-#import <SinoDetection/SDBussinessStateModel.h>
-#import <SinoDetection/SDConstant.h>
+#import <SinoDetection/SDAuthManager.h>
 #import <SinoDetection/SDDeviceManager.h>
 #import <SinoDetection/SDDeviceModel.h>
-#import <SinoDetection/SDDetectionDataModel.h>
-#import <SinoDetection/SDBaseDataModel.h>
-#import <SinoDetection/SDWLOneDataModel.h>
-#import <SinoDetection/SDAnWenAirDataModel.h>
-#import <SinoDetection/NSDate+SDAddition.h>
 #import <SinoDetection/SDReportManager.h>
+#import <SinoDetection/NSDate+SDAddition.h>
+#import <SinoDetection/SDBussinessStateModel.h>
+#import <SinoDetection/SDDetectionDataModel.h>
+#import <SinoDetection/SDConstant.h>
+#import <SinoDetection/SDBaseDataModel.h>
+#import <SinoDetection/SDAnWenAirDataModel.h>
+#import <SinoDetection/SDWLOneDataModel.h>
+#import <SinoDetection/SDTrue2DataModel.h>
+#import <SinoDetection/SDEADataModel.h>
+#import <SinoDetection/SDCardioChekDataModel.h>
+#import <SinoDetection/SDSLX120DataModel.h>

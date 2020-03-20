@@ -17,10 +17,14 @@ typedef NS_ENUM(NSUInteger, SDDMBluetoothType) {
     SDDMBluetoothTypeClassic ///< 经典蓝牙
 };
 
+/// 读Mac地址服务标识符关键字
+extern NSString * const SDDMMacUUID;
 /// 通知特征标识符关键字
 extern NSString * const SDDMNotifyUUID;
 /// 写特征标识符关键字
 extern NSString * const SDDMWriteUUID;
+/// 读特征标识符关键字
+extern NSString * const SDDMReadUUID;
 /// 写命令类型关键字
 extern NSString * const SDCWriteCommandType;
 /// 写命令描述关键字
@@ -44,8 +48,8 @@ extern NSString * const SDCWriteCommandDescription;
 @property (nonatomic, strong) NSString *mac;
 /// 格式化的Mac地址
 @property (nonatomic, strong, readonly) NSString *formattedMac;
-/// 服务标识符数组
-@property (nonatomic, strong, readonly) NSArray *services;
+/// 服务标识符字典
+@property (nonatomic, strong, readonly) NSDictionary *services;
 /// 特征字典
 @property (nonatomic, strong, readonly) NSDictionary *characteristics;
 /// 创建时间

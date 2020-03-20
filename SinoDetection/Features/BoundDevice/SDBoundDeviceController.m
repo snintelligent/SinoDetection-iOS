@@ -14,7 +14,7 @@
 #import <SinoDetection/SDReportManager.h>
 
 #ifdef DEBUG
-#define SDAppKey @"1de1f3448ee06ca88f81b5a57e25f436"
+#define SDAppKey @"8d4e5462abd95a693d0f37472168d294"
 #else
 #define SDAppKey @""
 #endif
@@ -34,6 +34,10 @@
     [[SDAuthManager sharedAuthManager] authWithAppKey:SDAppKey bundleId:bundleId];
     __weak typeof(self) weakSelf = self;
     [SDDeviceManager sharedDeviceManager].didUpdateBoundDevices = ^(NSArray<SDDeviceModel *> * _Nonnull boundDevices) {
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf.tableView reloadData];
+    };
+    [SDBluetoothManager sharedBluetoothManager].didReceiveMac = ^(NSString * _Nullable mac, SDDeviceModel * _Nonnull boundDevice) {
         __strong typeof(self) strongSelf = weakSelf;
         [strongSelf.tableView reloadData];
     };
@@ -73,7 +77,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer forIndexPath:indexPath];
     SDDeviceModel *boundDevice = [SDDeviceManager sharedDeviceManager].boundDevices[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@-%@", boundDevice.name, boundDevice.bluetoothName];
-    cell.detailTextLabel.text = boundDevice.formattedMac;
+    NSString *tmp;
+    if (boundDevice.formattedMac.length > 0) {
+        tmp = boundDevice.formattedMac;
+    } else if (boundDevice.uuid.length > 0) {
+        tmp = boundDevice.uuid;
+    }
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", tmp];
     return cell;
 }
 
