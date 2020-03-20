@@ -5,7 +5,7 @@ SinoDetection.framework是三诺生物传感股份有限公司开发的指标检
 请提供Bundle Id，联系我们，获取AppKey。
 ### 集成SDK
 #### 手动导入SDK
-下载[SinoDetection.framework](https://github.com/snintelligent/SinoDetection-iOS/releases/download/1.1.0/SinoDetection.framework.zip)，拖入到工程中。
+下载[SinoDetection.framework](https://github.com/snintelligent/SinoDetection-iOS/releases/download/1.2.0/SinoDetection.framework.zip)，拖入到工程中。
 #### 依赖的第三方库
 需要通过CocoaPods依赖第三方库，如下：
 ```
@@ -23,3 +23,7 @@ pod 'LKDBHelper', '2.5.3'
 * 安稳+Air血糖仪
 * WL-1型血糖仪
 * 真睿2代血糖仪
+* EA-12型血糖尿酸测试仪
+* EA-18型血糖尿酸测试仪
+* 卡迪克干式生化分析仪
+* 掌越血脂血糖仪
