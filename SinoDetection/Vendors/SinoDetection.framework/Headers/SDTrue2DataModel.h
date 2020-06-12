@@ -25,9 +25,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSUInteger second;
 /// 时间，格式：yyyy-MM-dd HH:mm:ss
 @property (nonatomic, strong, readonly) NSString *time;
-/// 数据类型（测试项目）
+/// 测试项目
 /// @note 真睿2代仅支持血糖
-@property (nonatomic, assign) SDCDataType dataType;
+@property (nonatomic, assign) SDCTestItemType testItemType;
 /// 测试结果，例如：251
 @property (nonatomic, assign) NSUInteger result;
 /// 结果值小数位数，范围为0-15

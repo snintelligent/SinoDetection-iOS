@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// EA-12型和EA-18型数据模型类
 @interface SDEADataModel : SDBaseDataModel
-/// 数据类型（测试项目）
+/// 测试项目
 /// @note EA-12型和EA-18型支持血糖和尿酸
-@property (nonatomic, assign) SDCDataType dataType;
+@property (nonatomic, assign) SDCTestItemType testItemType;
 /// 样本类型
 @property (nonatomic, assign) SDCSampleType sampleType;
 /// 校正码

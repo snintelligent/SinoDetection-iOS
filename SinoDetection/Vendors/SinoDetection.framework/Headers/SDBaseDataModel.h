@@ -50,6 +50,15 @@ extern NSString * const SDBDMResultL;
 /// @return 补零的值
 - (NSString *)zeroValue:(NSUInteger)value;
 
+/// 配置血压值和脉搏值
+/// @param bpResult 血压值
+/// @param p 脉搏值
+- (void)setupBpResult:(NSString * _Nullable * _Nullable)bpResult
+                    p:(NSString * _Nullable * _Nullable)p;
+
+/// 配置糖化血红蛋白值
+/// @param hbalc 糖化血红蛋白值
+- (void)setupHbalc:(NSString * _Nullable * _Nullable)hbalc;
 @end
 
 NS_ASSUME_NONNULL_END

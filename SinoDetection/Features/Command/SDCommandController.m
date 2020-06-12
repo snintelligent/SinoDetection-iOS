@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *ccContentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *vsc_ccContentView_superView;
 @property (weak, nonatomic) IBOutlet UIPickerView *ccPickerView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ccBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIView *timeMaskView;
 @property (weak, nonatomic) IBOutlet UIView *timeContentView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *vsc_timeContentView_superView;
@@ -22,6 +23,9 @@
 @property (nonatomic, strong) NSArray *correctCodes;
 @property (nonatomic, assign) NSIndexPath *indexPath;
 @property (nonatomic, strong) NSArray<SDDeviceModel *> *filteredDevices;
+@property (nonatomic, strong) NSArray *goldAQDataTypes;
+@property (nonatomic, strong) NSArray *uG11ReadDataTypes;
+@property (nonatomic, strong) NSArray *uG11ClearDataTypes;
 @end
 
 @implementation SDCommandController
@@ -32,6 +36,11 @@
     self.title = @"写命令";
     [self setupCorrectCodes];
     [self setupFilteredDevices];
+    [self setupDataTypes];
+}
+
+- (void)dealloc {
+    NSLog(@"");
 }
 
 #pragma mark - Private Methods
@@ -44,6 +53,22 @@
 }
 
 - (void)showCorrectCodeView {
+    SDDeviceModel *boundDevice = _filteredDevices[_indexPath.section];
+    NSDictionary *writeCommand = boundDevice.writeCommands[_indexPath.row];
+    SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
+    if (writeCmd == SDCCommandTypeSetCorrectCode) {
+        _ccBarButtonItem.title = @"设置验证码";
+    } else if (boundDevice.type == SDCDeviceTypeGoldAQ
+               || boundDevice.type == SDCDeviceTypeGoldAQAir
+               || boundDevice.type == SDCDeviceTypeUG11) {
+        if (writeCmd == SDCCommandTypeReadHistoryData) {
+            _ccBarButtonItem.title = @"读历史数据";
+        } else if (writeCmd == SDCCommandTypeClearHistoryData) {
+            _ccBarButtonItem.title = @"清历史数据";
+        }
+    }
+    [_ccPickerView reloadAllComponents];
+    [_ccPickerView selectRow:0 inComponent:0 animated:NO];
     _ccMaskView.hidden = NO;
     _ccMaskView.layer.backgroundColor = [UIColor clearColor].CGColor;
     _vsc_ccContentView_superView.constant = -CGRectGetHeight(_ccContentView.bounds);
@@ -69,6 +94,7 @@
 }
 
 - (void)showTimeView {
+    [_timePicker setDate:[NSDate date] animated:NO];
     _timeMaskView.hidden = NO;
     _timeMaskView.layer.backgroundColor = [UIColor clearColor].CGColor;
     _vsc_timeContentView_superView.constant = -CGRectGetHeight(_timeContentView.bounds);
@@ -103,6 +129,18 @@
     self.filteredDevices = [filteredDevices copy];
 }
 
+- (void)setupDataTypes {
+    NSMutableArray *dataTypes = [NSMutableArray arrayWithCapacity:0];
+    [dataTypes addObject:@(SDCDataTypeBloodSugar)];
+    [dataTypes addObject:@(SDCDataTypeBloodSugarQC)];
+    self.goldAQDataTypes = [dataTypes copy];
+    [dataTypes addObject:@(SDCDataTypeUricAcid)];
+    [dataTypes addObject:@(SDCDataTypeUricAcidQC)];
+    self.uG11ReadDataTypes = [dataTypes copy];
+    [dataTypes addObject:@(SDCDataTypeAll)];
+    self.uG11ClearDataTypes = [dataTypes copy];
+}
+
 #pragma mark - Gesture Methods
 - (IBAction)correctCodeViewTapped:(UITapGestureRecognizer *)tap {
     [self hideCorrectCodeView];
@@ -124,12 +162,27 @@
 - (IBAction)ccDoneBarButtonItemClicked:(UIBarButtonItem *)ccDoneBarButtonItem {
     [self dismissViewControllerAnimated:YES completion:nil];
     NSInteger row = [_ccPickerView selectedRowInComponent:0];
-    NSString *correctCode = [_correctCodes[row] stringValue];
+    NSString *content;
     SDDeviceModel *boundDevice = _filteredDevices[_indexPath.section];
     NSDictionary *writeCommand = boundDevice.writeCommands[_indexPath.row];
     SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
+    if (writeCmd == SDCCommandTypeSetCorrectCode) {
+         content = [_correctCodes[row] stringValue];
+    } else if (writeCmd == SDCCommandTypeReadHistoryData
+                || writeCmd == SDCCommandTypeClearHistoryData) {
+        if (boundDevice.type == SDCDeviceTypeGoldAQ
+            || boundDevice.type == SDCDeviceTypeGoldAQAir) {
+            content = [NSString stringWithFormat:@"%@", _goldAQDataTypes[row]];
+        } else if (boundDevice.type == SDCDeviceTypeUG11) {
+            if (writeCmd == SDCCommandTypeReadHistoryData) {
+                content = [NSString stringWithFormat:@"%@", _uG11ReadDataTypes[row]];
+            } else {
+                content = [NSString stringWithFormat:@"%@", _uG11ClearDataTypes[row]];
+            }
+        }
+    }
     if (_writeCommand) {
-        _writeCommand(writeCmd, correctCode, boundDevice);
+        _writeCommand(writeCmd, content, boundDevice);
     }
 }
 
@@ -190,6 +243,13 @@
     } else if (writeCmd == SDCCommandTypeSetTime) {
         [self showTimeView];
         return;
+    } else if ((writeCmd == SDCCommandTypeReadHistoryData
+                || writeCmd == SDCCommandTypeClearHistoryData)
+              && (boundDevice.type == SDCDeviceTypeGoldAQ
+                  || boundDevice.type == SDCDeviceTypeGoldAQAir
+                  || boundDevice.type == SDCDeviceTypeUG11)) {
+        [self showCorrectCodeView];
+        return;
     }
     [self dismissViewControllerAnimated:YES completion:nil];
     if (_writeCommand) {
@@ -203,11 +263,64 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    SDDeviceModel *boundDevice = _filteredDevices[_indexPath.section];
+    NSDictionary *writeCommand = boundDevice.writeCommands[_indexPath.row];
+    SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
+    if (writeCmd == SDCCommandTypeReadHistoryData
+         || writeCmd == SDCCommandTypeClearHistoryData) {
+        if (boundDevice.type == SDCDeviceTypeGoldAQ
+            || boundDevice.type == SDCDeviceTypeGoldAQAir) {
+            return _goldAQDataTypes.count;
+        } else if (boundDevice.type == SDCDeviceTypeUG11) {
+            if (writeCmd == SDCCommandTypeReadHistoryData) {
+                return _uG11ReadDataTypes.count;
+            } else {
+                return _uG11ClearDataTypes.count;
+            }
+        }
+    }
     return _correctCodes.count;
 }
 
 #pragma mark - UIPickerViewDelegate
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    SDDeviceModel *boundDevice = _filteredDevices[_indexPath.section];
+    NSDictionary *writeCommand = boundDevice.writeCommands[_indexPath.row];
+    SDCCommandType writeCmd = [writeCommand[SDCWriteCommandType] unsignedIntegerValue];
+    if (writeCmd == SDCCommandTypeReadHistoryData
+        || writeCmd == SDCCommandTypeClearHistoryData) {
+        NSMutableString *title = [NSMutableString stringWithCapacity:0];
+        if (writeCmd == SDCCommandTypeReadHistoryData) {
+            [title appendString:@"读"];
+        } else {
+            [title appendString:@"清"];
+        }
+        SDCDataType dataType = SDCDataTypeUnknown;
+        if (boundDevice.type == SDCDeviceTypeGoldAQ
+            || boundDevice.type == SDCDeviceTypeGoldAQAir) {
+            dataType = [_goldAQDataTypes[row] unsignedIntegerValue];
+        } else if (boundDevice.type == SDCDeviceTypeUG11) {
+            if (writeCmd == SDCCommandTypeReadHistoryData) {
+                dataType = [_uG11ReadDataTypes[row] unsignedIntegerValue];
+            } else {
+                dataType = [_uG11ClearDataTypes[row] unsignedIntegerValue];
+            }
+        }
+        if (dataType == SDCDataTypeBloodSugar) {
+            [title appendString:@"血糖历史数据"];
+        } else if (dataType == SDCDataTypeBloodSugarQC) {
+            [title appendString:@"血糖质控历史数据"];
+        } else if (dataType == SDCDataTypeUricAcid) {
+            [title appendString:@"尿酸历史数据"];
+        } else if (dataType == SDCDataTypeUricAcidQC) {
+            [title appendString:@"尿酸质控历史数据"];
+        } else if (dataType == SDCDataTypeAll) {
+            [title appendString:@"所有历史数据"];
+        } else {
+            [title appendString:@"历史数据"];
+        }
+        return [title copy];
+    }
     return [_correctCodes[row] stringValue];
 }
 @end

@@ -12,17 +12,56 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 业务状态枚举
 typedef NS_ENUM(NSUInteger, SDBSMBussinessState) {
-    SDBSMBussinessStateUnconnect = 0, ///< 未连接
-    SDBSMBussinessStateConnected, ///< 已连接
-    SDBSMBussinessStateDripBloodBlink, ///< 滴血闪烁
-    SDBSMBussinessStateStartTest, ///< 开始测试
-    SDBSMBussinessStateShutDown, ///< 仪器关机
-    SDBSMBussinessStateTestConnectSuccess, ///< 测试连接成功
-    SDBSMBussinessStateSetTimeSuccess, ///< 设置时间成功
-    SDBSMBussinessStateClearHistoryDataSuccess, ///< 清历史数据成功
-    SDBSMBussinessStateClearHistoryDataFail, ///< 清历史数据失败
-    SDBSMBussinessStateNoHistroyData, ///< 无历史数据
-    SDBSMBussinessStateReadDeviceSNSuccess, ///< 读仪器SN号成功
+    /// 未连接
+    SDBSMBussinessStateUnconnect = 0,
+    /// 已连接
+    SDBSMBussinessStateConnected,
+    /// 滴血闪烁
+    SDBSMBussinessStateDripBloodBlink,
+    /// 开始测试
+    SDBSMBussinessStateStartTest,
+    /// 仪器关机
+    SDBSMBussinessStateShutDown,
+    /// 测试连接成功
+    SDBSMBussinessStateTestConnectSuccess,
+    /// 设置时间成功
+    SDBSMBussinessStateSetTimeSuccess,
+    /// 清历史数据成功
+    SDBSMBussinessStateClearHistoryDataSuccess,
+    /// 清历史数据失败
+    SDBSMBussinessStateClearHistoryDataFail,
+    /// 无历史数据
+    SDBSMBussinessStateNoHistroyData,
+    /// 读仪器SN号成功
+    SDBSMBussinessStateReadDeviceSNSuccess,
+    /// 清血糖历史数据成功，针对金准+、UG-11 Code
+    SDBSMBussinessStateClearBloodSugarHistoryDataSuccess,
+    /// 清血糖历史数据失败，针对金准+、UG-11 Code
+    SDBSMBussinessStateClearBloodSugarHistoryDataFail,
+    /// 无血糖历史数据，针对金准+、UG-11 Code
+    SDBSMBussinessStateNoBloodSugarHistroyData,
+    /// 清血糖质控历史数据成功，针对金准+、UG-11 Code
+    SDBSMBussinessStateClearBloodSugarQCHistoryDataSuccess,
+    /// 清血糖质控历史数据失败，针对金准+、UG-11 Code
+    SDBSMBussinessStateClearBloodSugarQCHistoryDataFail,
+    /// 无血糖质控历史数据，针对金准+、UG-11 Code
+    SDBSMBussinessStateNoBloodSugarQCHistroyData,
+    /// 清尿酸历史数据成功，针对UG-11 Code
+    SDBSMBussinessStateClearUricAcidHistoryDataSuccess,
+    /// 清尿酸历史数据失败，针对UG-11 Code
+    SDBSMBussinessStateClearUricAcidHistoryDataFail,
+    /// 无尿酸历史数据，针对UG-11 Code
+    SDBSMBussinessStateNoUricAcidHistroyData,
+    /// 清尿酸质控历史数据成功，针对UG-11 Code
+    SDBSMBussinessStateClearUricAcidQCHistoryDataSuccess,
+    /// 清尿酸质控历史数据失败，针对UG-11 Code
+    SDBSMBussinessStateClearUricAcidQCHistoryDataFail,
+    /// 无尿酸质控历史数据，针对UG-11 Code
+    SDBSMBussinessStateNoUricAcidQCHistroyData,
+    /// 清所有历史数据成功，针对UG-11 Code
+    SDBSMBussinessStateClearAllHistoryDataSuccess,
+    /// 清所有历史数据失败，针对UG-11 Code
+    SDBSMBussinessStateClearAllHistoryDataFail,
 };
 
 @interface SDBussinessStateModel : NSObject

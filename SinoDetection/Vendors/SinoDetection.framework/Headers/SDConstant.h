@@ -27,7 +27,19 @@ typedef NS_ENUM(NSUInteger, SDCDeviceType) {
     /// 卡迪克干式生化分析仪
     SDCDeviceTypeCardioChek = 3,
     /// 掌越血脂血糖仪
-    SDCDeviceTypeSLX120 = 13
+    SDCDeviceTypeSLX120 = 13,
+    /// 金准+血糖仪
+    SDCDeviceTypeGoldAQ = 9,
+    /// 金准+Air血糖仪
+    SDCDeviceTypeGoldAQAir = 33,
+    /// UG-11 Code血糖尿酸测试仪
+    SDCDeviceTypeUG11 = 26,
+    /// 脉搏波臂式血压计
+    SDCDeviceTypeMBBArm = 6,
+    /// PCH-100便携式糖化血红蛋白分析仪
+    SDCDeviceTypePCH = 34,
+    /// 脉搏波台式血压计
+    SDCDeviceTypeMBBDesktop = 5
 };
 
 /// 命令字枚举
@@ -62,35 +74,36 @@ typedef NS_ENUM(NSUInteger, SDCCommandType) {
     /// @note 真睿2代的命令字
     SDCCommandTypeReadDeviceSN = SDCCommandTypeReadDeviceId,
     /// 历史数据补发
-    /// @note 真睿2代和掌越的命令字
     SDCCommandTypeHistoryDataReissue = 0x0E,
     /// 数据上传
-    /// @note EA-12型和EA-18型的命令字
+    /// @note EA-12型、EA-18型和PCH-100的命令字
     SDCCommandTypeDataUpload = SDCCommandTypeClearHistoryData
 };
 
-/// 数据类型（测试项目）枚举
-typedef NS_ENUM(NSUInteger, SDCDataType) {
+/// 测试项目枚举
+typedef NS_ENUM(NSUInteger, SDCTestItemType) {
+    /// 未知
+    SDCTestItemTypeUnknown,
     /// 血糖
-    SDCDataTypeBloodSugar,
+    SDCTestItemTypeBloodSugar,
     /// 尿酸
-    SDCDataTypeUricAcid,
+    SDCTestItemTypeUricAcid,
     /// 血酮
-    SDCDataTypeBloodKetone,
+    SDCTestItemTypeBloodKetone,
     /// 总胆固醇
-    SDCDataTypeTc,
+    SDCTestItemTypeTc,
     /// 高密度脂蛋白胆固醇
-    SDCDataTypeHdl,
+    SDCTestItemTypeHdl,
     /// 甘油三酯
-    SDCDataTypeTg,
+    SDCTestItemTypeTg,
     /// 低密度脂蛋白胆固醇
-    SDCDataTypeLdl,
+    SDCTestItemTypeLdl,
     /// 非高密度脂蛋白胆固醇
-    SDCDataTypeNonHdl,
+    SDCTestItemTypeNonHdl,
     /// 总胆固醇与高密度脂蛋白胆固醇比
-    SDCDataTypeTcHdl,
+    SDCTestItemTypeTcHdl,
     /// 低密度脂蛋白胆固醇与高密度脂蛋白胆固醇比
-    SDCDataTypeLdlHdl
+    SDCTestItemTypeLdlHdl
 };
 
 /// 样本类型枚举
@@ -103,13 +116,10 @@ typedef NS_ENUM(NSUInteger, SDCSampleType) {
     /// @note 安稳+Air的样本类型
     SDCSampleTypeResistanceStripe,
     /// 质控液
-    /// @note 真睿2代、EA-12型和EA-18型的样本类型
     SDCSampleTypeQCSolution = SDCSampleTypeResistanceStripe,
     /// 室间质评质控液
-    /// @note 真睿2代的样本类型
     SDCSampleTypeEQAQCSolution,
     /// 尿液
-    /// @note 真睿2代的样本类型
     SDCSampleTypeUrine
 };
 
@@ -122,16 +132,12 @@ typedef NS_ENUM(NSUInteger, SDCUnitType) {
     /// mg/dL
     SDCUnitTypeMg_dL,
     /// umol/L
-    /// @note 真睿2代、EA-12型和EA-18型的单位类型
     SDCUnitTypeUmol_L,
     /// mg/L
-    /// @note 真睿2代单位类型
     SDCUnitTypeMg_L,
     /// mg/g
-    /// @note 真睿2代单位类型
     SDCUnitTypeMg_g,
     /// mg/mol
-    /// @note 真睿2代单位类型
     SDCUnitTypeMg_mol,
     /// 无单位
     /// @note 掌越单位类型
@@ -166,6 +172,22 @@ typedef NS_ENUM(NSUInteger, SDCNutritionStatus) {
     SDCNutritionStatusTakeMedicine,
     /// 其他
     SDCNutritionStatusOther
+};
+
+/// 数据类型枚举
+typedef NS_ENUM(NSUInteger, SDCDataType) {
+    /// 未知
+    SDCDataTypeUnknown,
+    /// 血糖
+    SDCDataTypeBloodSugar,
+    /// 血糖质控
+    SDCDataTypeBloodSugarQC,
+    /// 尿酸
+    SDCDataTypeUricAcid,
+    /// 尿酸质控
+    SDCDataTypeUricAcidQC,
+    /// 所有
+    SDCDataTypeAll = 0xFFFF + 1
 };
 
 /// 测试连接

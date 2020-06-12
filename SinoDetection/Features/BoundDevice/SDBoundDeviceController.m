@@ -13,11 +13,10 @@
 #import <SinoDetection/SDDeviceManager.h>
 #import <SinoDetection/SDReportManager.h>
 
-#ifdef DEBUG
-#define SDAppKey @"8d4e5462abd95a693d0f37472168d294"
-#else
-#define SDAppKey @""
-#endif
+// Debug SDK环境
+//#define SDAppKey @"8d4e5462abd95a693d0f37472168d294"
+// Release SDK环境
+#define SDAppKey @"edef02939ad62a41f31b9032a3734646"
 
 @interface SDBoundDeviceController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

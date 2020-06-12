@@ -13,6 +13,11 @@
 #import "SDEADataModel.h"
 #import "SDCardioChekDataModel.h"
 #import "SDSLX120DataModel.h"
+#import "SDGoldAQDataModel.h"
+#import "SDGoldAQAirDataModel.h"
+#import "SDUG11DataModel.h"
+#import "SDMBBDataModel.h"
+#import "SDPCHDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

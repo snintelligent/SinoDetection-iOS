@@ -62,6 +62,8 @@ typedef void(^SDBMDidReceiveMac)(NSString * _Nullable mac, SDDeviceModel *boundD
 ///099，蓝牙WL-1型支持到分
 ///
 /// 当设置校正码时，content赋值校正码，格式为@"23"，校正码有取值范围，蓝牙WL-1型为1-40
+///
+/// 当写读历史数据或清历史数据命令字到金准+时，content为数据类型，比如@"1"，血糖；@"2"，血糖质控
 /// @param command 命令字
 /// @param content 内容数据
 /// @param boundDevice 绑定的设备对象

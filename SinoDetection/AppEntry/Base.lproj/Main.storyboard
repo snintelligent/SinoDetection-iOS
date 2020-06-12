@@ -506,16 +506,7 @@
                                                         </connections>
                                                     </barButtonItem>
                                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="J10-GS-lQa"/>
-                                                    <barButtonItem style="plain" id="xh7-lL-xJU">
-                                                        <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vmp-5V-Mpl">
-                                                            <rect key="frame" x="152.5" y="5.5" width="70" height="33"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <state key="normal" title="设置时间">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                        </button>
-                                                    </barButtonItem>
+                                                    <barButtonItem title="设置时间" id="jMV-wq-hDj"/>
                                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SbZ-Be-RvV"/>
                                                     <barButtonItem systemItem="done" id="4Kg-UZ-apA">
                                                         <connections>
@@ -580,16 +571,7 @@
                                                         </connections>
                                                     </barButtonItem>
                                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="glY-o7-t3j"/>
-                                                    <barButtonItem style="plain" id="uxj-60-V1F">
-                                                        <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gMa-Nx-cdL">
-                                                            <rect key="frame" x="144" y="5.5" width="87" height="33"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <state key="normal" title="设置校正码">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                        </button>
-                                                    </barButtonItem>
+                                                    <barButtonItem title="设置校正码" id="UKf-Ja-4e5"/>
                                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rSC-PL-aPT"/>
                                                     <barButtonItem systemItem="done" id="uoH-0e-C1n">
                                                         <connections>
@@ -657,6 +639,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ccBarButtonItem" destination="UKf-Ja-4e5" id="gSU-yQ-TVo"/>
                         <outlet property="ccContentView" destination="d4n-43-yKu" id="dNc-Fl-rHm"/>
                         <outlet property="ccMaskView" destination="6u3-8k-K3R" id="3Ch-I1-Vkn"/>
                         <outlet property="ccPickerView" destination="NuO-im-dII" id="sW7-uy-jMX"/>

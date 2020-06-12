@@ -31,3 +31,8 @@ FOUNDATION_EXPORT const unsigned char SinoDetectionVersionString[];
 #import <SinoDetection/SDEADataModel.h>
 #import <SinoDetection/SDCardioChekDataModel.h>
 #import <SinoDetection/SDSLX120DataModel.h>
+#import <SinoDetection/SDGoldAQDataModel.h>
+#import <SinoDetection/SDGoldAQAirDataModel.h>
+#import <SinoDetection/SDUG11DataModel.h>
+#import <SinoDetection/SDMBBDataModel.h>
+#import <SinoDetection/SDPCHDataModel.h>

@@ -38,9 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString *formattedTemperature;
 /// 校正码，数值范围：0-99
 @property (nonatomic, assign) NSUInteger correctCode;
-/// 数据类型（测试项目）
+/// 测试项目
 /// @note 安稳+Air仅支持血糖
-@property (nonatomic, assign) SDCDataType dataType;
+@property (nonatomic, assign) SDCTestItemType testItemType;
 /// 单位类型
 @property (nonatomic, assign) SDCUnitType unitType;
 /// 单位
