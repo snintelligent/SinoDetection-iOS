@@ -1,11 +1,11 @@
 # SinoDetection-iOS
-SinoDetection.framework是三诺生物传感股份有限公司开发的指标检测SDK，目前已接入3款检测设备，可以便捷的实现多款蓝牙设备的同时连接与数据接收，极大的简化了蓝牙设备的接入流程，接入用户只需要专注自身业务的开发，降低了用户接入蓝牙设备的开发成本。同时我们会为接入用户提供对应的技术支持，及时的响应用户需求。
+SinoDetection.framework是三诺生物传感股份有限公司开发的指标检测SDK，可以便捷的实现多款蓝牙设备的同时连接与数据接收，极大的简化了蓝牙设备的接入流程，接入用户只需要专注自身业务的开发，降低了用户接入蓝牙设备的开发成本。同时我们会为接入用户提供对应的技术支持，及时的响应用户需求。
 # 如何集成
 ### 申请AppKey
 请提供Bundle Id，联系我们，获取AppKey。
 ### 集成SDK
 #### 手动导入SDK
-下载[SinoDetection.framework](https://github.com/snintelligent/SinoDetection-iOS/releases/download/1.2.0/SinoDetection.framework.zip)，拖入到工程中。
+下载[SinoDetection.framework](https://github.com/snintelligent/SinoDetection-iOS/releases/download/1.3.0/SinoDetection.framework.zip)，拖入到工程中。
 #### 依赖的第三方库
 需要通过CocoaPods依赖第三方库，如下：
 ```
