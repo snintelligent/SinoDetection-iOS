@@ -14,7 +14,7 @@
 #import <SinoDetection/SDReportManager.h>
 
 // Debug SDK环境
-//#define SDAppKey @"8d4e5462abd95a693d0f37472168d294"
+//#define SDAppKey @"4f43595c6b383ce57efc46e036954905"
 // Release SDK环境
 #define SDAppKey @"edef02939ad62a41f31b9032a3734646"
 
@@ -44,7 +44,7 @@
 
 #pragma mark - UIButton Methods
 - (IBAction)testButtonClicked:(UIButton *)testButton {
-    if ([SDDeviceManager sharedDeviceManager].boundDevices.count <= 0) {
+    if ([SDDeviceManager sharedDeviceManager].boundDevices.count == 0) {
         NSLog(@"请先绑定设备");
         return;
     }

@@ -59,6 +59,22 @@ extern NSString * const SDBDMResultL;
 /// 配置糖化血红蛋白值
 /// @param hbalc 糖化血红蛋白值
 - (void)setupHbalc:(NSString * _Nullable * _Nullable)hbalc;
+
+/// 配置体温值
+/// @param t 体温值
+- (void)setupT:(NSString * _Nullable * _Nullable)t;
+
+/// 配置体重值
+/// @param weightResult 体重值
+- (void)setupWeightResult:(NSString *_Nullable * _Nullable)weightResult;
+
+/// 配置PEF 值、FEV1 值、FVC 值
+/// @param pef PEF 值
+/// @param fev1 FEV1 值
+/// @param fvc FVC 值
+- (void)setupPef:(NSString * _Nullable * _Nullable)pef
+            fev1:(NSString * _Nullable * _Nullable)fev1
+             fvc:(NSString * _Nullable * _Nullable)fvc;
 @end
 
 NS_ASSUME_NONNULL_END

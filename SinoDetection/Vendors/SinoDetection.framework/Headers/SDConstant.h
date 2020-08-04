@@ -39,7 +39,15 @@ typedef NS_ENUM(NSUInteger, SDCDeviceType) {
     /// PCH-100便携式糖化血红蛋白分析仪
     SDCDeviceTypePCH = 34,
     /// 脉搏波台式血压计
-    SDCDeviceTypeMBBDesktop = 5
+    SDCDeviceTypeMBBDesktop = 5,
+    /// 爱立康RLF-A1红外额温计
+    SDCDeviceTypeAlicnRLFA1 = 28,
+    /// 体重秤
+    SDCDeviceTypeWeighingScale = 16,
+    /// 呼吸家
+    SDCDeviceTypeBreathHome = 18,
+    /// 安诺心血压计
+    SDCDeviceTypeSinoHeart = 7,
 };
 
 /// 命令字枚举
@@ -77,7 +85,55 @@ typedef NS_ENUM(NSUInteger, SDCCommandType) {
     SDCCommandTypeHistoryDataReissue = 0x0E,
     /// 数据上传
     /// @note EA-12型、EA-18型和PCH-100的命令字
-    SDCCommandTypeDataUpload = SDCCommandTypeClearHistoryData
+    SDCCommandTypeDataUpload = SDCCommandTypeClearHistoryData,
+    /// 终端同步APP时间
+    /// @note 爱立康RLF-A1的命令码
+    SDCCommandTypeSyncTime = 0x30,
+    /// 在线测量结果
+    /// @note 爱立康RLF-A1的命令码
+    SDCCommandTypeOnlineMeasResult = 0x31,
+    /// 读取终端记忆温度数据
+    /// @note 爱立康RLF-A1的命令码
+    SDCCommandTypeReadMemTempData = 0x32,
+    /// 删除记忆数据
+    /// @note 爱立康RLF-A1的命令码
+    SDCCommandTypeDeleteMemData = 0x33,
+    /// 应用层回复血压计已经连接
+    /// @note 安诺心的命令
+    SDCCommandTypeConnected = 0xA0,
+    /// 血压计通知开始测量
+    /// @note 安诺心的命令
+    SDCCommandTypeStartMeasuring = 0xB1,
+    /// 血压计通知正在归零
+    /// @note 安诺心的命令
+    SDCCommandTypeZeroing = 0xB3,
+    /// 血压计通知归零结束
+    /// @note 安诺心的命令
+    SDCCommandTypeZeroEnd = 0xB4,
+    /// 血压计发送测量过程数据
+    /// @note 安诺心的命令
+    SDCCommandTypeMeasProcessData = 0xB7,
+    /// 血压计发送测量结果
+    /// @note 安诺心的命令
+    SDCCommandTypeMeasurementResult = 0xB8,
+    /// 应用层要求血压计开始测量
+    /// @note 安诺心的命令
+    SDCCommandTypeRequestToStartMeasuring = 0xA1,
+    /// 应用层要求血压计停止测量
+    /// @note 安诺心的命令
+    SDCCommandTypeRequestToStopMeasuring = 0xA2,
+    /// 应用层要求血压计关机
+    /// @note 安诺心的命令
+    SDCCommandTypeRequestToShutDown = 0xA6,
+    /// 应用层设置血压计日期
+    /// @note 安诺心的命令
+    SDCCommandTypeSetDate = 0xA8,
+    /// 应用层设置血压计时间
+    /// @note 安诺心的命令
+    SDCCommandTypeSinoHeartSetTime = 0xA9,
+    /// 应用层读取血压计历史记录
+    /// @note 安诺心的命令
+    SDCCommandTypeReadHistoryRecords = 0xAC,
 };
 
 /// 测试项目枚举
@@ -139,6 +195,18 @@ typedef NS_ENUM(NSUInteger, SDCUnitType) {
     SDCUnitTypeMg_g,
     /// mg/mol
     SDCUnitTypeMg_mol,
+    /// KG
+    /// @note 体重秤单位类型
+    SDCUnitTypeKG,
+    /// 斤
+    /// @note 体重秤单位类型
+    SDCUnitTypeCatty,
+    /// LB
+    /// @note 体重秤单位类型
+    SDCUnitTypeLB,
+    /// ST:LB
+    /// @note 体重秤单位类型
+    SDCUnitTypeSTLB,
     /// 无单位
     /// @note 掌越单位类型
     SDCUnitTypeNo = 256
@@ -210,7 +278,14 @@ extern NSString * const SDCWriteCommandShutDownDescription;
 extern NSString * const SDCWriteCommandTurnOffBluetoothDescription;
 /// 读仪器SN号
 extern NSString * const SDCWriteCommandReadDeviceSNDescription;
-
+/// 读取终端记忆温度数据
+extern NSString * const SDCWriteCommandReadMemTempDataDescription;
+/// 删除记忆数据
+extern NSString * const SDCWriteCommandDeleteMemDataDescription;
+/// 开始测量
+extern NSString * const SDCWriteCommandStartMeasuringDescription;
+/// 停止测量
+extern NSString * const SDCWriteCommandStopMeasuringDescription;
 /// 年基数
 extern const NSUInteger SDCBaseYear;
 

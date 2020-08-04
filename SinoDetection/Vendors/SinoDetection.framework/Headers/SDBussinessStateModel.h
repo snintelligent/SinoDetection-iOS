@@ -62,6 +62,20 @@ typedef NS_ENUM(NSUInteger, SDBSMBussinessState) {
     SDBSMBussinessStateClearAllHistoryDataSuccess,
     /// 清所有历史数据失败，针对UG-11 Code
     SDBSMBussinessStateClearAllHistoryDataFail,
+    /// 终端同步APP时间成功，针对爱立康RLF-A1
+    SDBSMBussinessStateSyncTimeSuccess,
+    /// 删除记忆数据成功，针对爱立康RLF-A1
+    SDBSMBussinessStateDeleteMemDataSuccess,
+    /// 开始测量，针对安诺心
+    SDBSMBussinessStateStartMeasuring,
+    /// 正在归零，针对安诺心
+    SDBSMBussinessStateZeroing,
+    /// 归零结束，针对安诺心
+    SDBSMBussinessStateZeroEnd,
+    /// 收到测量过程数据，针对安诺心
+    SDBSMBussinessStateDidReceiveMeasProcessData,
+    /// 收到测量结果，针对安诺心
+    SDBSMBussinessStateDidReceiveMeasurementResult,
 };
 
 @interface SDBussinessStateModel : NSObject

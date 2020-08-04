@@ -18,6 +18,10 @@
 #import "SDUG11DataModel.h"
 #import "SDMBBDataModel.h"
 #import "SDPCHDataModel.h"
+#import "SDAlicnRLFA1DataModel.h"
+#import "SDWeighingScaleDataModel.h"
+#import "SDBreathHomeDataModel.h"
+#import "SDSinoHeartDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

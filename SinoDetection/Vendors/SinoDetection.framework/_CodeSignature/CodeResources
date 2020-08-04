@@ -8,6 +8,10 @@
 		<data>
 		K+BVEoZbzOiP+ZXoFs2bKF3fRz0=
 		</data>
+		<key>Headers/SDAlicnRLFA1DataModel.h</key>
+		<data>
+		LT8aLnL511bkBksR3AiZW3hjJns=
+		</data>
 		<key>Headers/SDAnWenAirDataModel.h</key>
 		<data>
 		5Rgv1xyBtifSsAL8PEZw9OLzjKA=
@@ -18,15 +22,19 @@
 		</data>
 		<key>Headers/SDBaseDataModel.h</key>
 		<data>
-		KI3UvMNw2bs/inYaWRqQ5exP5qE=
+		MNQxfdCdvz3DYoDn7zEIY5dtSAQ=
 		</data>
 		<key>Headers/SDBluetoothManager.h</key>
 		<data>
 		frj4wqwgs23xZBdZs6p+L7fMov4=
 		</data>
+		<key>Headers/SDBreathHomeDataModel.h</key>
+		<data>
+		pCggatlJaoxJhawJaACQXfj1SBI=
+		</data>
 		<key>Headers/SDBussinessStateModel.h</key>
 		<data>
-		WtxQ4gs21ccrkGNTjYxMVw+ipIs=
+		+Ku7dUr1wlY3QvPClwy6NzW2vbQ=
 		</data>
 		<key>Headers/SDCardioChekDataModel.h</key>
 		<data>
@@ -34,11 +42,11 @@
 		</data>
 		<key>Headers/SDConstant.h</key>
 		<data>
-		1RpAJq3oEjUFSZm0GiKup/zcw1A=
+		nZJ6JgJ0GEN14QE/y6450Dg37yA=
 		</data>
 		<key>Headers/SDDetectionDataModel.h</key>
 		<data>
-		7Poxqjn3e/7Mobi1gteaWyk45C4=
+		N1IiMVWGNHKcEwnYePNszY83C38=
 		</data>
 		<key>Headers/SDDeviceManager.h</key>
 		<data>
@@ -76,6 +84,10 @@
 		<data>
 		GoQxEgTmTUSyjPDc9V7aaY2N6cM=
 		</data>
+		<key>Headers/SDSinoHeartDataModel.h</key>
+		<data>
+		bXhBUhAbxCo/jUcp55HrnXImc0c=
+		</data>
 		<key>Headers/SDTrue2DataModel.h</key>
 		<data>
 		8BAqKNTpP6F20fsRowSs9waAvAU=
@@ -88,13 +100,17 @@
 		<data>
 		sq/LvzMj+9MBXtjjGS2wc41P1O8=
 		</data>
+		<key>Headers/SDWeighingScaleDataModel.h</key>
+		<data>
+		iIf0ulz8mxcI4wZTgd/FgShfB9Y=
+		</data>
 		<key>Headers/SinoDetection.h</key>
 		<data>
-		f/XAnyLXxoH2OqpSW0SRXyeOdcA=
+		U539cC+JczZ2AMqCnPo/kz5M5TI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vJ2xf25ePOKN6BXvucCGTjWkQSs=
+		nQ9Zx1D6Qgi03OHOrKQWEIPSbPE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -112,6 +128,17 @@
 			<key>hash2</key>
 			<data>
 			xFbhi2BHTt49ufP8q/Uv7L2IQ5pPzudDaO2vGrI/Eg0=
+			</data>
+		</dict>
+		<key>Headers/SDAlicnRLFA1DataModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LT8aLnL511bkBksR3AiZW3hjJns=
+			</data>
+			<key>hash2</key>
+			<data>
+			qU93vX13RsIHloam2EUR+JtYd8AftWgdgeJ06m1ZMDI=
 			</data>
 		</dict>
 		<key>Headers/SDAnWenAirDataModel.h</key>
@@ -140,11 +167,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KI3UvMNw2bs/inYaWRqQ5exP5qE=
+			MNQxfdCdvz3DYoDn7zEIY5dtSAQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			orbfTuOfPRc4zti/DCikLzxhv1ofxgbtb3ck5wy3Xl0=
+			jIareq21LbspXC5q/X8KzY3LnUaROXaPmLbipc0yvIE=
 			</data>
 		</dict>
 		<key>Headers/SDBluetoothManager.h</key>
@@ -158,15 +185,26 @@
 			6y9np/7hSUU1Kr+VLZJjFQ7a/igz5lGu+BY8rinCqJA=
 			</data>
 		</dict>
+		<key>Headers/SDBreathHomeDataModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pCggatlJaoxJhawJaACQXfj1SBI=
+			</data>
+			<key>hash2</key>
+			<data>
+			5jic/f6Hkwy70O9lM095i7YVvju2Byatb1l/7zgGmc8=
+			</data>
+		</dict>
 		<key>Headers/SDBussinessStateModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WtxQ4gs21ccrkGNTjYxMVw+ipIs=
+			+Ku7dUr1wlY3QvPClwy6NzW2vbQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			r3J7mMe3DZ/NwKdryI7mHpWo/ZwPaZKAd5KrXlXFw3c=
+			DWSXl86zxoKMTsTXnW8x2DimTZBQAC1BHU8QBZxORSE=
 			</data>
 		</dict>
 		<key>Headers/SDCardioChekDataModel.h</key>
@@ -184,22 +222,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1RpAJq3oEjUFSZm0GiKup/zcw1A=
+			nZJ6JgJ0GEN14QE/y6450Dg37yA=
 			</data>
 			<key>hash2</key>
 			<data>
-			VuUBgywzXZaFIueLUzTM9wry1DXkqTRllVfTWQNvxX4=
+			92rcnWS8uD6xBKhTWjlZAgcg9Ndbp7frPxO1yUzY1Ew=
 			</data>
 		</dict>
 		<key>Headers/SDDetectionDataModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7Poxqjn3e/7Mobi1gteaWyk45C4=
+			N1IiMVWGNHKcEwnYePNszY83C38=
 			</data>
 			<key>hash2</key>
 			<data>
-			pDOwYHQmhwpCZ9KiENDjq/RqjeB9c0Tn0KBXS5mYHPE=
+			k0Ap5zInA18ggCaaAW6LzSa8vNahOx2Jh7JDyGpItGE=
 			</data>
 		</dict>
 		<key>Headers/SDDeviceManager.h</key>
@@ -301,6 +339,17 @@
 			u6FVdHqhVO7k0N0fZwQPUkKFMpsx8AkSzo/sJ6Ca9TY=
 			</data>
 		</dict>
+		<key>Headers/SDSinoHeartDataModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bXhBUhAbxCo/jUcp55HrnXImc0c=
+			</data>
+			<key>hash2</key>
+			<data>
+			8YCdNRFJIRkIc8aw/gJrNd7fMT5K0nkOJHW1j3uDp0U=
+			</data>
+		</dict>
 		<key>Headers/SDTrue2DataModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -334,15 +383,26 @@
 			Xcgifp4C6cIxUu2UjoD9ap4BTxh/innfgEhWH0OoJKc=
 			</data>
 		</dict>
+		<key>Headers/SDWeighingScaleDataModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iIf0ulz8mxcI4wZTgd/FgShfB9Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			+al+rVmZmv70wIWD1hOhDt7/WqfS/OHD0OPRqo2/MRU=
+			</data>
+		</dict>
 		<key>Headers/SinoDetection.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f/XAnyLXxoH2OqpSW0SRXyeOdcA=
+			U539cC+JczZ2AMqCnPo/kz5M5TI=
 			</data>
 			<key>hash2</key>
 			<data>
-			BcxZjN8vaoEP0joC07Zqkr+x42iUUtd+YEnT4lR5jZ8=
+			NRp+Abq++OZh1zRkVQZoW5ahnovz/BmrUSRysMh12vc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

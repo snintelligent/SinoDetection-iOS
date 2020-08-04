@@ -240,7 +240,8 @@
     if (writeCmd == SDCCommandTypeSetCorrectCode) {
         [self showCorrectCodeView];
         return;
-    } else if (writeCmd == SDCCommandTypeSetTime) {
+    } else if (writeCmd == SDCCommandTypeSetTime
+               || writeCmd == SDCCommandTypeSetDate) {
         [self showTimeView];
         return;
     } else if ((writeCmd == SDCCommandTypeReadHistoryData
