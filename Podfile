@@ -6,7 +6,7 @@ target 'SinoDetection' do
   use_frameworks!
 
   # Pods for SinoDetection
-  pod 'AFNetworking', '3.2.1'
+  pod 'AFNetworking', '4.0.1'
   pod 'LKDBHelper', '2.5.3'
   
   target 'SinoDetectionTests' do

@@ -1,18 +1,18 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -23,20 +23,21 @@ PODS:
     - FMDB
 
 DEPENDENCIES:
-  - AFNetworking (= 3.2.1)
+  - AFNetworking (= 4.0.1)
   - LKDBHelper (= 2.5.3)
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
-    - AFNetworking
+  https://github.com/CocoaPods/Specs.git:
     - FMDB
     - LKDBHelper
+  trunk:
+    - AFNetworking
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   LKDBHelper: 26b47fdd6f4c800ef83c478554829ff8a1da20c5
 
-PODFILE CHECKSUM: 7ef4e0d6d1ff85612b32ca0913d90aded4868159
+PODFILE CHECKSUM: 5d3ea76075e9139ab125e7c816e932f1a1e0d8f9
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
