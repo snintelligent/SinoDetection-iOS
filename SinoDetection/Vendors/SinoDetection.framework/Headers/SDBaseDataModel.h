@@ -50,11 +50,9 @@ extern NSString * const SDBDMResultL;
 /// @return 补零的值
 - (NSString *)zeroValue:(NSUInteger)value;
 
-/// 配置血压值和脉搏值
+/// 配置血压值
 /// @param bpResult 血压值
-/// @param p 脉搏值
-- (void)setupBpResult:(NSString * _Nullable * _Nullable)bpResult
-                    p:(NSString * _Nullable * _Nullable)p;
+- (void)setupBpResult:(NSString * _Nullable * _Nullable)bpResult;
 
 /// 配置糖化血红蛋白值
 /// @param hbalc 糖化血红蛋白值
@@ -62,7 +60,7 @@ extern NSString * const SDBDMResultL;
 
 /// 配置体温值
 /// @param t 体温值
-- (void)setupT:(NSString * _Nullable * _Nullable)t;
+- (void)setupT:(double *)t;
 
 /// 配置体重值
 /// @param weightResult 体重值
@@ -75,6 +73,14 @@ extern NSString * const SDBDMResultL;
 - (void)setupPef:(NSString * _Nullable * _Nullable)pef
             fev1:(NSString * _Nullable * _Nullable)fev1
              fvc:(NSString * _Nullable * _Nullable)fvc;
+
+/// 配置脉搏值
+/// @param p 脉搏值
+- (void)setupP:(NSUInteger *)p;
+
+/// 配置血氧饱和度值
+/// @param spo2 血氧饱和度值
+- (void)setupSpo2:(NSUInteger *)spo2;
 @end
 
 NS_ASSUME_NONNULL_END

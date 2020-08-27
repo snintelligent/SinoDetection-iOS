@@ -22,6 +22,7 @@
 #import "SDWeighingScaleDataModel.h"
 #import "SDBreathHomeDataModel.h"
 #import "SDSinoHeartDataModel.h"
+#import "SDMXODataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

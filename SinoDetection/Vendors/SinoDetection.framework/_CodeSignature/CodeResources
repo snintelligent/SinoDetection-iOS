@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/SDBaseDataModel.h</key>
 		<data>
-		MNQxfdCdvz3DYoDn7zEIY5dtSAQ=
+		rSgivVQnnHoohYvQLe/uKxYtyjE=
 		</data>
 		<key>Headers/SDBluetoothManager.h</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/SDConstant.h</key>
 		<data>
-		nZJ6JgJ0GEN14QE/y6450Dg37yA=
+		6IAmm2yRW4OKQ9hnZONFZgzp+Bo=
 		</data>
 		<key>Headers/SDDetectionDataModel.h</key>
 		<data>
-		N1IiMVWGNHKcEwnYePNszY83C38=
+		1yT9jfFyWXuu5+MlKMuCMm+ZMDg=
 		</data>
 		<key>Headers/SDDeviceManager.h</key>
 		<data>
@@ -71,6 +71,10 @@
 		<key>Headers/SDMBBDataModel.h</key>
 		<data>
 		6Zb0HdyBeu6xidaQh0oPw//Wd7A=
+		</data>
+		<key>Headers/SDMXODataModel.h</key>
+		<data>
+		XZmVuWlw7TFXa3fIRiuug3mDbhc=
 		</data>
 		<key>Headers/SDPCHDataModel.h</key>
 		<data>
@@ -106,11 +110,11 @@
 		</data>
 		<key>Headers/SinoDetection.h</key>
 		<data>
-		U539cC+JczZ2AMqCnPo/kz5M5TI=
+		E/0ddxMsMaixheEFYk4uZqU9hw4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		M5wvAvgDHcNDZHMncfPVc/VIp0M=
+		I0hCzMh2B1GUAm4EerqaqJjc+/g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -167,11 +171,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MNQxfdCdvz3DYoDn7zEIY5dtSAQ=
+			rSgivVQnnHoohYvQLe/uKxYtyjE=
 			</data>
 			<key>hash2</key>
 			<data>
-			jIareq21LbspXC5q/X8KzY3LnUaROXaPmLbipc0yvIE=
+			YXZU2jPYfTLwAhA4cXI7UJkrp4591B1z0kDCAckQ1yc=
 			</data>
 		</dict>
 		<key>Headers/SDBluetoothManager.h</key>
@@ -222,22 +226,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nZJ6JgJ0GEN14QE/y6450Dg37yA=
+			6IAmm2yRW4OKQ9hnZONFZgzp+Bo=
 			</data>
 			<key>hash2</key>
 			<data>
-			92rcnWS8uD6xBKhTWjlZAgcg9Ndbp7frPxO1yUzY1Ew=
+			Pyarqx5Ces4abmPSA9fr3jDFeEK+bS5RcAVJ7F/YCgU=
 			</data>
 		</dict>
 		<key>Headers/SDDetectionDataModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			N1IiMVWGNHKcEwnYePNszY83C38=
+			1yT9jfFyWXuu5+MlKMuCMm+ZMDg=
 			</data>
 			<key>hash2</key>
 			<data>
-			k0Ap5zInA18ggCaaAW6LzSa8vNahOx2Jh7JDyGpItGE=
+			n3vpv/xynv+/Twq5zbKobbP8iOXpMPWWqdyULIiLelo=
 			</data>
 		</dict>
 		<key>Headers/SDDeviceManager.h</key>
@@ -304,6 +308,17 @@
 			<key>hash2</key>
 			<data>
 			T9hHx6d6rwdhYGQ2qwJQLLR63VnjrHCh+spADtWC3rE=
+			</data>
+		</dict>
+		<key>Headers/SDMXODataModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XZmVuWlw7TFXa3fIRiuug3mDbhc=
+			</data>
+			<key>hash2</key>
+			<data>
+			rFeLXNDf+G/1iRNosNuSD1mDzmQLNZGP2NlTxgyrJxM=
 			</data>
 		</dict>
 		<key>Headers/SDPCHDataModel.h</key>
@@ -398,11 +413,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U539cC+JczZ2AMqCnPo/kz5M5TI=
+			E/0ddxMsMaixheEFYk4uZqU9hw4=
 			</data>
 			<key>hash2</key>
 			<data>
-			NRp+Abq++OZh1zRkVQZoW5ahnovz/BmrUSRysMh12vc=
+			HP20dXBjEbtXH6CISS95C9ZNsKT4CfqDtsnDuAyEAAU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

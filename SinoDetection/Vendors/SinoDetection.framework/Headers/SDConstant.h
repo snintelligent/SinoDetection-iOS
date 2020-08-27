@@ -48,6 +48,8 @@ typedef NS_ENUM(NSUInteger, SDCDeviceType) {
     SDCDeviceTypeBreathHome = 18,
     /// 安诺心血压计
     SDCDeviceTypeSinoHeart = 7,
+    /// 美心温度和脉搏血氧仪
+    SDCDeviceTypeMedXingOximeter = 39
 };
 
 /// 命令字枚举
