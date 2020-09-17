@@ -8,6 +8,7 @@ target 'SinoDetection' do
   # Pods for SinoDetection
   pod 'AFNetworking', '4.0.1'
   pod 'LKDBHelper', '2.5.3'
+  pod 'ProtocolBuffers', '1.9.11'
   
   target 'SinoDetectionTests' do
     inherit! :search_paths

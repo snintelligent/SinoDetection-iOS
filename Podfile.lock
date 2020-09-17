@@ -21,10 +21,12 @@ PODS:
     - LKDBHelper/standard (= 2.5.3)
   - LKDBHelper/standard (2.5.3):
     - FMDB
+  - ProtocolBuffers (1.9.11)
 
 DEPENDENCIES:
   - AFNetworking (= 4.0.1)
   - LKDBHelper (= 2.5.3)
+  - ProtocolBuffers (= 1.9.11)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -32,12 +34,14 @@ SPEC REPOS:
     - LKDBHelper
   trunk:
     - AFNetworking
+    - ProtocolBuffers
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   LKDBHelper: 26b47fdd6f4c800ef83c478554829ff8a1da20c5
+  ProtocolBuffers: d509225eb2ea43d9582a59e94348fcf86e2abd65
 
-PODFILE CHECKSUM: 5d3ea76075e9139ab125e7c816e932f1a1e0d8f9
+PODFILE CHECKSUM: 166739cec93e6220cee5b5adaa0e697576edaa82
 
 COCOAPODS: 1.9.1

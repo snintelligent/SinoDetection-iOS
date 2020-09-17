@@ -49,7 +49,9 @@ typedef NS_ENUM(NSUInteger, SDCDeviceType) {
     /// 安诺心血压计
     SDCDeviceTypeSinoHeart = 7,
     /// 美心温度和脉搏血氧仪
-    SDCDeviceTypeMedXingOximeter = 39
+    SDCDeviceTypeMedXingOximeter = 39,
+    /// 蓝牙WL-1型血糖仪（微信版）
+    SDCDeviceTypeWL1WeChat = 44,
 };
 
 /// 命令字枚举

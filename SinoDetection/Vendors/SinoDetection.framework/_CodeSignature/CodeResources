@@ -42,11 +42,11 @@
 		</data>
 		<key>Headers/SDConstant.h</key>
 		<data>
-		6IAmm2yRW4OKQ9hnZONFZgzp+Bo=
+		TEtykr5acIRyBKHxen3QnChZ3V4=
 		</data>
 		<key>Headers/SDDetectionDataModel.h</key>
 		<data>
-		1yT9jfFyWXuu5+MlKMuCMm+ZMDg=
+		H9qNSyMsyBWeoLNMFxAP2gl0X/Q=
 		</data>
 		<key>Headers/SDDeviceManager.h</key>
 		<data>
@@ -100,6 +100,10 @@
 		<data>
 		WJHC0C+gPQ9OvQj56CBgoRV49X8=
 		</data>
+		<key>Headers/SDWL1WeChatModel.h</key>
+		<data>
+		r3JannNASv385LqohS/90vmDTJk=
+		</data>
 		<key>Headers/SDWLOneDataModel.h</key>
 		<data>
 		sq/LvzMj+9MBXtjjGS2wc41P1O8=
@@ -110,11 +114,11 @@
 		</data>
 		<key>Headers/SinoDetection.h</key>
 		<data>
-		E/0ddxMsMaixheEFYk4uZqU9hw4=
+		v3+QhsVh3qP7aQFjIM6MqCCTOg4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		I0hCzMh2B1GUAm4EerqaqJjc+/g=
+		MDsT/OTLjTAXslb/9OTaNkCoscM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -226,22 +230,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6IAmm2yRW4OKQ9hnZONFZgzp+Bo=
+			TEtykr5acIRyBKHxen3QnChZ3V4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Pyarqx5Ces4abmPSA9fr3jDFeEK+bS5RcAVJ7F/YCgU=
+			Q/6aulkeClxADeah4XJx/TUVzfXspY6rUWhvY86RuEc=
 			</data>
 		</dict>
 		<key>Headers/SDDetectionDataModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1yT9jfFyWXuu5+MlKMuCMm+ZMDg=
+			H9qNSyMsyBWeoLNMFxAP2gl0X/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			n3vpv/xynv+/Twq5zbKobbP8iOXpMPWWqdyULIiLelo=
+			3WPSn44zjyuGW5G/vKJ3Z3BeuL3HppTW3zltrRu8Gdo=
 			</data>
 		</dict>
 		<key>Headers/SDDeviceManager.h</key>
@@ -387,6 +391,17 @@
 			MONFJh5uq6q7ngX2TavB4/L4bPIzs631jUC3benfHGU=
 			</data>
 		</dict>
+		<key>Headers/SDWL1WeChatModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			r3JannNASv385LqohS/90vmDTJk=
+			</data>
+			<key>hash2</key>
+			<data>
+			qRlslncATOpClbqwGUMmfdwQySLPkBZtzl5RH1LYbUg=
+			</data>
+		</dict>
 		<key>Headers/SDWLOneDataModel.h</key>
 		<dict>
 			<key>hash</key>
@@ -413,11 +428,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E/0ddxMsMaixheEFYk4uZqU9hw4=
+			v3+QhsVh3qP7aQFjIM6MqCCTOg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HP20dXBjEbtXH6CISS95C9ZNsKT4CfqDtsnDuAyEAAU=
+			R7ffpF20AhNNDHqKB+FLZduJJIwOL2Yige9wF5+cWN4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
