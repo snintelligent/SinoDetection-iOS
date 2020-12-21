@@ -52,6 +52,8 @@ typedef NS_ENUM(NSUInteger, SDCDeviceType) {
     SDCDeviceTypeMedXingOximeter = 39,
     /// 蓝牙WL-1型血糖仪（微信版）
     SDCDeviceTypeWL1WeChat = 44,
+    /// 脉搏波血压计（RBP-9804）
+    SDCDeviceTypeMBB9804 = 32,
 };
 
 /// 命令字枚举
@@ -138,6 +140,9 @@ typedef NS_ENUM(NSUInteger, SDCCommandType) {
     /// 应用层读取血压计历史记录
     /// @note 安诺心的命令
     SDCCommandTypeReadHistoryRecords = 0xAC,
+    /// 连接血压计
+    /// @note 脉搏波血压计（RBP-9804）的命令
+    SDCCommandTypeConnectBPMeter = 0x0101,
 };
 
 /// 测试项目枚举
