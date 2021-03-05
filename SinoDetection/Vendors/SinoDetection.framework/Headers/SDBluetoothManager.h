@@ -48,6 +48,8 @@ typedef void(^SDBMDidReceiveMac)(NSString * _Nullable mac, SDDeviceModel *boundD
 - (void)rescan;
 
 /// 扫描某类外设
+///
+/// 扫描全部类型的外设，入参为SDCDeviceTypeUnknown
 /// @param deviceType 设备类型
 - (void)scanWithDeviceType:(SDCDeviceType)deviceType;
 

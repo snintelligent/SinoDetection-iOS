@@ -14,7 +14,7 @@
 #import <SinoDetection/SDReportManager.h>
 
 // Debug SDK环境
-//#define SDAppKey @"4f43595c6b383ce57efc46e036954905"
+//#define SDAppKey @"ec58a59bd315a4f39d041dc81d7ec47b"
 // Release SDK环境
 #define SDAppKey @"edef02939ad62a41f31b9032a3734646"
 
