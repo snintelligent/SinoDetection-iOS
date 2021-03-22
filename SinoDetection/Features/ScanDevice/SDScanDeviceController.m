@@ -61,13 +61,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     SDDeviceModel *scannedDevice = [SDDeviceManager sharedDeviceManager].scannedDevices[indexPath.row];
     // 根据idName判断类型，并更新设备对象
-    if ([scannedDevice.idName containsString:@"SLX120"]) {
-        scannedDevice.type = SDCDeviceTypeSLX120;
-        scannedDevice.name = @"掌越";
-    } else if ([scannedDevice.idName containsString:@"BDE_WEIXIN_TTM"]) {
-        scannedDevice.type = SDCDeviceTypeUG11;
-        scannedDevice.name = @"UG-11 Code";
-    }
+//    if ([scannedDevice.idName containsString:@"SLX120"]) {
+//        scannedDevice.type = SDCDeviceTypeSLX120;
+//        scannedDevice.name = @"掌越";
+//    } else if ([scannedDevice.idName containsString:@"BDE_WEIXIN_TTM"]) {
+//        scannedDevice.type = SDCDeviceTypeUG11;
+//        scannedDevice.name = @"UG-11 Code";
+//    }
     [[SDDeviceManager sharedDeviceManager] addBoundDevice:scannedDevice];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
