@@ -42,3 +42,4 @@ FOUNDATION_EXPORT const unsigned char SinoDetectionVersionString[];
 #import <SinoDetection/SDSinoHeartDataModel.h>
 #import <SinoDetection/SDMXODataModel.h>
 #import <SinoDetection/SDWL1WeChatModel.h>
+#import <SinoDetection/SDPCH50DataModel.h>

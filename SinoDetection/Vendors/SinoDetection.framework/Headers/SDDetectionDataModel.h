@@ -24,6 +24,7 @@
 #import "SDSinoHeartDataModel.h"
 #import "SDMXODataModel.h"
 #import "SDWL1WeChatModel.h"
+#import "SDPCH50DataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

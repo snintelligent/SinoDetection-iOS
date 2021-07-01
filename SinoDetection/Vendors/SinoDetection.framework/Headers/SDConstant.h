@@ -38,6 +38,8 @@ typedef NS_ENUM(NSUInteger, SDCDeviceType) {
     SDCDeviceTypeMBBArm = 6,
     /// PCH-100便携式糖化血红蛋白分析仪
     SDCDeviceTypePCH = 34,
+    /// PCH-50
+    SDCDeviceTypePCH50 = 100,
     /// 脉搏波台式血压计
     SDCDeviceTypeMBBDesktop = 5,
     /// 爱立康RLF-A1红外额温计
@@ -168,7 +170,9 @@ typedef NS_ENUM(NSUInteger, SDCTestItemType) {
     /// 总胆固醇与高密度脂蛋白胆固醇比
     SDCTestItemTypeTcHdl,
     /// 低密度脂蛋白胆固醇与高密度脂蛋白胆固醇比
-    SDCTestItemTypeLdlHdl
+    SDCTestItemTypeLdlHdl,
+    ///  糖化血红蛋白
+    SDcTestItemTypeTHXHDB
 };
 
 /// 样本类型枚举
